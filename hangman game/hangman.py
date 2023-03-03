@@ -1,20 +1,21 @@
+import random
+
 MAX_WORD_LENGTH = 10
 MAX_GUESSES = 3
 
 # Get the word to guess
-while True:
+word = input(f"Enter a word for someone to guess (Max {MAX_WORD_LENGTH}): ").lower()
+while len(word) > MAX_WORD_LENGTH:
+    print(f"The word should not be longer than {MAX_WORD_LENGTH} characters.")
     word = input(f"Enter a word for someone to guess (Max {MAX_WORD_LENGTH}): ").lower()
-    if len(word) > MAX_WORD_LENGTH:
-        print(f"The word should not be longer than {MAX_WORD_LENGTH} characters.")
-    else:
-        break
 
-guessed_letters = []
+# Set up the game
+guessed_letters = set()
 incorrect_guesses = 0
-
 hangman_correct = "😄"
 hangman_incorrect = "😔"
 
+# Start the game
 while True:
     # Print out the partially guessed word
     word_display = ""
@@ -33,19 +34,19 @@ while True:
         print("Congratulations, you have won!")
         break
 
-    # Check if the guess is a single letter or a space
-    if len(guess) != 1 and guess != " ":
+    # Check if the guess is a single letter
+    if len(guess) != 1:
         print("Please enter a single letter or the entire word.")
         continue
 
     # Check if the guess has already been made
     if guess in guessed_letters:
-        print(f"You have already guessed {guess} {guessed_letters.count(guess)} times.")
+        print(f"You have already guessed {guess}.")
         continue
 
     # Check if the guess is correct
     if guess in word:
-        guessed_letters.append(guess)
+        guessed_letters.add(guess)
         print(f"Correct!\n\n{hangman_correct}\n")
     else:
         incorrect_guesses += 1
@@ -53,7 +54,7 @@ while True:
 
     # Check if the player has won
     if all(letter in guessed_letters for letter in word):
-        print("Congratulations, you have won!{word}.")
+        print(f"Congratulations, you have won! {word}.")
         break
 
     # Check if the player has lost
