@@ -1,0 +1,32 @@
+{
+  "workbench.colorTheme": "codeSTACKr Theme",
+  "workbench.colorCustomizations": {
+    "terminal.foreground": "#000000",
+    "terminal.background": "#0D2B45"
+  },
+  "editor.fontFamily": "'Fira Code', Consolas, 'Courier New', monospace",
+  "editor.fontSize": 16,
+  "editor.fontLigatures": true,
+  "editor.lineHeight": 28,
+  "editor.tabSize": 2,
+  "editor.wordWrap": "on",
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "files.insertFinalNewline": true,
+  "files.trimTrailingWhitespace": true,
+  "files.autoSave": "onFocusChange",
+  "terminal.integrated.shell.windows": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+  "terminal.integrated.fontSize": 16,
+  "terminal.integrated.fontFamily": "'Fira Code', Consolas, 'Courier New', monospace",
+  "terminal.integrated.lineHeight": 1.1,
+  "terminal.integrated.cursorStyle": "block",
+  "terminal.integrated.cursorBlinking": true,
+  "terminal.integrated.scrollback": 5000,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "typescript.updateImportsOnFileMove.enabled": "always"
+  "emmet.triggerExpansionOnTab": true,
+  "editor.codeActionsOnSave": {"source.fixAll": true},
+  "terminal.integrated.fontSize": 14,
+  "files.encoding": "iso8859-1",
+  "editor.folding": true,
+}
